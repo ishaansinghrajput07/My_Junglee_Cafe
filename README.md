@@ -1,6 +1,8 @@
 # My Junglee Cafe — React app
 
-Rebuilt from the compiled production bundle (all 5 routes: `/`, `/about`, `/menu`, `/events`, `/order-now`, plus the 404 page).
+My_Junglee_Cafe is a React app rebuilt from the compiled production bundle.
+
+It includes all 5 routes: `/`, `/about`, `/menu`, `/events`, `/order-now`, plus the 404 page.
 
     npm install
     npm run dev
