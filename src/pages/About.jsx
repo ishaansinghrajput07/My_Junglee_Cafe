@@ -1,0 +1,52 @@
+import { useEffect, useRef } from 'react';
+import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+import { Sheet, SheetTrigger, SheetContent, SheetTitle } from '../components/ui/sheet';
+
+export default function About() {
+  const rootRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const media = gsap.matchMedia(rootRef.current);
+    const context = gsap.context(() => {
+      gsap.utils.toArray(`.fade-up`).forEach((element) => {
+        gsap.fromTo(element, { opacity: 0, y: 60 }, {
+          opacity: 1,
+          y: 0,
+          duration: 1.8,
+          ease: `power2.out`,
+          scrollTrigger: { trigger: element, start: `top 85%` },
+        });
+      });
+      gsap.fromTo(`.parallax-img`, { scale: 1 }, {
+        scale: 1.15,
+        ease: `none`,
+        scrollTrigger: {
+          trigger: `.parallax-container`,
+          start: `top bottom`,
+          end: `bottom top`,
+          scrub: true,
+        },
+      });
+      media.add(`(min-width: 768px)`, () => {
+        ScrollTrigger.create({
+          trigger: `.pinned-container`,
+          start: `top top`,
+          end: `bottom bottom`,
+          pin: `.pinned-image`,
+          pinSpacing: false,
+        });
+      });
+    }, rootRef);
+
+    return () => {
+      context.revert();
+      media.revert();
+    };
+  }, []);
+
+  return <main ref={rootRef} className="bg-[#050505] text-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden"><div className="fixed top-6 left-6 z-[100]"><Sheet><SheetTrigger asChild={!0}><button className="group w-12 h-12 rounded-full bg-white/5 backdrop-blur-md flex items-center justify-center text-white transition-all duration-500 hover:bg-[#D4AF37] hover:text-black hover:scale-110 active:scale-95 border border-white/10"><Menu size={24} strokeWidth={1.5} className="transition-transform duration-500 group-hover:rotate-180"/></button></SheetTrigger><SheetContent side="left" className="p-0 border-none w-full sm:max-w-md overflow-hidden"><SheetTitle className="sr-only">Navigation Menu</SheetTitle><img src="https://res.cloudinary.com/dgtcnyvfo/image/upload/f_auto,q_auto,w_1200//ChatGPT_Image_Jul_3_2026_12_56_00_AM_ezfmji.jpg" alt="Sidebar" loading="lazy" className="w-full h-full object-cover"/><div className="absolute inset-0 flex flex-col items-center justify-start pt-14 gap-8">{[{ name: `Home`, href: `/` }, { name: `About`, href: `/about` }, { name: `Menu`, href: `/menu` }, { name: `Let's Party`, href: `/events` }, { name: `Order Now`, href: `/order-now` }].map(e => <Link to={e.href} className="font-instrument-serif text-3xl md:text-4xl text-black hover:text-[#D4AF37] transition-all duration-300 tracking-[0.2em] hover:scale-110 drop-shadow-lg" key={e.name}>{e.name}</Link>)}</div></SheetContent></Sheet></div><section className="relative w-full h-[70vh] md:h-[100dvh] overflow-hidden"><div className="absolute inset-0 bg-cover bg-[center_80%] opacity-40 mix-blend-luminosity" style={{ backgroundImage: `url('https://res.cloudinary.com/dgtcnyvfo/image/upload/v1782683123/lounge_upscayl_4x_upscayl-standard-4x_hmhmcn.jpg')` }}/><div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"/><div className="absolute bottom-24 right-12 md:right-32 text-right"><h1 className="font-['Playfair_Display'] text-6xl md:text-[clamp(3rem,8vw,10rem)] leading-[0.85] font-light tracking-tight text-white/90">Our<br /><span className="italic text-[#D4AF37]/80">Story.</span></h1></div></section><div className="h-[15vh] md:h-[25vh]"/><section className="relative w-full max-w-[1400px] mx-auto px-6 md:px-[clamp(1.5rem,4vw,6rem)] pb-32"><div className="parallax-container relative flex flex-col md:flex-row items-center justify-center"><div className="w-full md:w-[55%] relative aspect-[4/5] overflow-hidden rounded-sm bg-black/20"><div className="parallax-img absolute inset-0 bg-cover bg-center origin-center" style={{ backgroundImage: `url('https://res.cloudinary.com/dm6i0xmqw/image/upload/v1782728787/WhatsApp_Image_2026-06-29_at_09.44.07_2_kpvx0f_upscayl_4x_upscayl-standard-4x_pakmpl.jpg')`, willChange: `transform` }}/><div className="absolute inset-0 bg-black/10 mix-blend-overlay"/></div><div className="w-full md:w-[55%] md:-ml-[10%] mt-12 md:mt-0 relative z-10 fade-up bg-[#0A0A0A]/90 backdrop-blur-xl p-8 md:p-[clamp(1.5rem,4vw,4rem)] border border-white/5 shadow-2xl"><h2 className="font-cinzel tracking-[0.3em] text-[#D4AF37] text-xs md:text-sm uppercase mb-8">About the Cafe</h2><p className="font-['Playfair_Display'] text-3xl md:text-[clamp(1.75rem,3.2vw,3rem)] italic text-white/90 mb-10 leading-tight">"More Than a Café. A Place to Belong."</p><div className="space-y-6 font-['Inter'] font-light text-white/70 text-sm md:text-[clamp(13px,1.1vw,16px)] leading-relaxed tracking-wide"><p>Some places are built to be seen. My Junglee Cafe was built to be felt.</p><p>Nestled in the peaceful village of Sangolda in North Goa, just a short drive from Porvorim and Mapusa, My Junglee Cafe sits quietly behind the heritage walls of Lar Amorosa, away from the noise, away from the crowds, away from everything that makes Goa feel rushed. You turn into a lane you almost miss, and suddenly the world gets greener, slower, and a little more kind.</p><p>Opened in 2023 by Goan entrepreneur Collins Mascarenhas, the space was built around existing trees, not in spite of them. A beautiful 1930s Goan heritage home forms the heart of the indoor section, while outside, bamboo, rustic wood, and open sky take over. String lights flicker through the canopy after sundown, and an elevated seating nook gives you a treehouse view of it all. Every corner asks you to stay a little longer.</p><p>The menu is a love letter to both Goa and the world beyond it. Wood-fired pizzas, the beloved Goan Chorizo Fries, Chicken Cafreal, fresh seafood, hearty breakfast platters, handcrafted cocktails and mocktails, and smoothies bursting with local fruit. Whether you are here at 9 in the morning with a coffee and nowhere to be, or at night with good company and a full table, there is always something honest and delicious waiting.</p><p>Beyond the food, there is life here. Live music nights, BBQ evenings, yoga mornings, art sessions, a kids' play area, and open arms for pets. My Junglee Cafe holds space for all of it, effortlessly.</p><p>Loved by locals and travellers alike, it has earned a reputation as one of Sangolda's most cherished and celebrated spots, with guests returning again and again saying the same thing: they did not want to leave.</p><p className="font-['Playfair_Display'] text-[#D4AF37] text-xl italic pt-6 border-t border-white/10 mt-6 drop-shadow-md">Come find your corner of happiness.</p></div></div></div></section><div className="h-[10vh] md:h-[20vh]"/><section className="pinned-container w-full relative min-h-screen border-t border-white/5 bg-[#080808]"><div className="relative w-full max-w-[1600px] mx-auto min-h-screen"><div className="w-full md:w-[45%] h-[60vh] md:h-screen relative overflow-hidden pinned-image border-r border-white/5 z-20 sticky top-0 md:absolute md:top-0 md:left-0"><div className="absolute inset-0 bg-[#080808]"/><div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://res.cloudinary.com/dgtcnyvfo/image/upload/v1782700397/WhatsApp_Image_2026-06-29_at_08.00.44_upscayl_4x_upscayl-standard-4x_1_bvvlqy.jpg')` }}/><div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#080808] to-transparent opacity-60"/><div className="absolute bottom-12 left-12 md:bottom-24 md:left-24 z-10 fade-up"><h2 className="font-cinzel tracking-[0.3em] text-[#D4AF37] text-xs uppercase mb-4">About the Owner</h2><h3 className="font-['Playfair_Display'] text-5xl md:text-[clamp(2.5rem,4vw,4.5rem)] text-white/90 italic leading-none">Collins<br />Mascarenhas.</h3></div></div><div className="w-full min-h-screen py-24 md:py-48 px-8 md:pl-[48%] md:pt-0 md:pr-[clamp(2rem,6vw,6rem)] flex flex-col justify-center bg-[#080808] relative z-10"><p className="font-['Playfair_Display'] text-3xl md:text-[clamp(1.75rem,3.2vw,3rem)] italic text-white/90 mb-16 leading-tight fade-up">"The Man Behind It All"</p><div className="space-y-12 font-['Inter'] font-light text-white/70 text-sm md:text-[clamp(14px,1.1vw,18px)] leading-relaxed tracking-wide"><p className="fade-up">My Junglee Cafe is the vision of Collins Mascarenhas, an Indian hospitality entrepreneur, hotelier, and corporate professional with a deep love for his roots and an unwavering belief that hospitality is not a service, it is a feeling.</p><p className="fade-up">When Collins Mascarenhas opened My Junglee Cafe in 2023, he brought with him a clear sense of purpose. To create a space that felt alive, honest, and unlike anything else in North Goa. A place where food is made with care, every guest feels seen, and the surroundings do as much for the soul as the menu does for the appetite.</p><p className="fade-up">His vision extends beyond My Junglee Cafe. As the founder and operator of the neighbouring Lar Amorosa, a boutique Portuguese-style homestay and hotel in the same locality, he has long understood that the best spaces are not built overnight. They are grown with patience, intention, and a genuine respect for the people who walk through the door.</p><p className="fade-up">What makes Collins Mascarenhas truly remarkable is the life he balances alongside it all. With a long-standing corporate career as a materials, supply chain, and logistics specialist in the oil and gas sector, he has brought the discipline and precision of that world into everything he builds in hospitality. An avid motorcycle enthusiast deeply embedded in Goa's cultural and biker lifestyle, he is someone who lives with both drive and soul.</p><p className="fade-up font-['Playfair_Display'] text-2xl text-[#D4AF37] italic pt-8 border-t border-white/10 mt-8 drop-shadow-md">My Junglee Cafe is his gift to Sangolda. And Sangolda, it seems, has embraced it wholeheartedly.</p></div></div></div></section><footer className="w-full bg-[#0a0a0a] py-8 text-center border-t border-white/10 relative z-20"><p className="font-cinzel text-[#D4AF37]/80 text-[10px] tracking-[0.3em] font-bold uppercase">© 2026 My Junglee Cafe. All Rights Reserved.</p></footer></main>; }

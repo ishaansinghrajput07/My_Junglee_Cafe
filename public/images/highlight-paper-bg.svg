@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" preserveAspectRatio="none">
+  <defs>
+    <filter id="paper-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" seed="14"/>
+      <feColorMatrix values="0 0 0 0 .54 0 0 0 0 .50 0 0 0 0 .42 0 0 0 .11 0"/>
+    </filter>
+    <pattern id="newsprint" width="336" height="296" patternUnits="userSpaceOnUse">
+      <rect width="336" height="296" fill="#e9e5dc"/>
+      <text x="5" y="12" font-family="Georgia,serif" font-size="6" font-weight="bold" fill="#292722">THE DAILY JOURNAL · LOCAL EDITION</text>
+      <path d="M5 17h158" stroke="#292722" stroke-width=".6"/>
+      <text x="5" y="27" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="#292722">LIFE AMONG THE TREES</text>
+      <g fill="#393730" font-family="Georgia,serif" font-size="4.5">
+        <text x="5" y="36">A quiet place to pause and gather</text>
+        <text x="5" y="43">where old stories meet new memories.</text>
+        <text x="5" y="50">The evening light falls across the</text>
+        <text x="5" y="57">garden as friends share a table.</text>
+        <text x="5" y="68">LOCAL NOTES · FOOD &amp; CULTURE</text>
+        <text x="5" y="77">Fresh flavours, warm welcomes, and</text>
+        <text x="5" y="84">a little more time to enjoy the day.</text>
+        <text x="5" y="91">From the coast to the green lanes,</text>
+        <text x="5" y="98">there is always something to discover.</text>
+        <text x="5" y="109">WEEKEND REVIEW · NORTH GOA</text>
+        <text x="5" y="118">A table beneath the canopy offers</text>
+        <text x="5" y="125">a welcome escape from the everyday.</text>
+        <text x="5" y="132">Read more on page seven.</text>
+      </g>
+      <path d="M5 62h158M5 103h158M5 138h158" stroke="#45433d" stroke-width=".35"/>
+      <path d="M112 30v31M78 70v29M130 108v25" stroke="#45433d" stroke-width=".4"/>
+      <text x="174" y="12" font-family="Georgia,serif" font-size="6" font-weight="bold" fill="#292722">THE EVENING CHRONICLE · GOA</text>
+      <path d="M174 17h157" stroke="#292722" stroke-width=".6"/>
+      <text x="174" y="27" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="#292722">GARDENS &amp; GATHERINGS</text>
+      <g fill="#393730" font-family="Georgia,serif" font-size="4.5">
+        <text x="174" y="36">Beneath the palms, a place to unwind</text>
+        <text x="174" y="43">with good food and friendly faces.</text>
+        <text x="174" y="50">A quiet corner, tucked away from</text>
+        <text x="174" y="57">the bustle of the road outside.</text>
+        <text x="174" y="68">TASTE · TRAVEL · COMMUNITY</text>
+        <text x="174" y="77">A thoughtful menu celebrates fresh</text>
+        <text x="174" y="84">ingredients and local favourites.</text>
+        <text x="174" y="91">Long lunches turn into evenings,</text>
+        <text x="174" y="98">and every visit has its own story.</text>
+        <text x="174" y="109">THE WEEKEND TABLE · ISSUE 06</text>
+        <text x="174" y="118">Find a seat, take a breath, and stay</text>
+        <text x="174" y="125">a little longer under the canopy.</text>
+        <text x="174" y="132">A guide to the good life.</text>
+      </g>
+      <path d="M174 62h157M174 103h157M174 138h157" stroke="#45433d" stroke-width=".35"/>
+      <path d="M282 30v31M244 70v29M306 108v25" stroke="#45433d" stroke-width=".4"/>
+      <text x="5" y="158" font-family="Georgia,serif" font-size="7" font-weight="bold" fill="#292722">A PLACE TO SLOW DOWN</text>
+      <text x="174" y="158" font-family="Georgia,serif" font-size="7" font-weight="bold" fill="#292722">THE GARDEN NOTEBOOK</text>
+      <path d="M5 163h158M174 163h157" stroke="#292722" stroke-width=".5"/>
+      <g fill="#393730" font-family="Georgia,serif" font-size="4.5">
+        <text x="5" y="174">Under the old trees, the day feels</text>
+        <text x="5" y="181">a little softer and the table welcomes</text>
+        <text x="5" y="188">one more friend. A favourite corner</text>
+        <text x="5" y="195">for coffee, conversation and a pause.</text>
+        <text x="5" y="207">In every season the garden changes,</text>
+        <text x="5" y="214">but the warm welcome stays the same.</text>
+        <text x="5" y="226">A local guide to good food and</text>
+        <text x="5" y="233">the simple pleasure of being together.</text>
+        <text x="174" y="174">Look closely and find sunlight on</text>
+        <text x="174" y="181">the leaves, stories in every corner,</text>
+        <text x="174" y="188">and time for one more cup of tea.</text>
+        <text x="174" y="200">THE NEIGHBOURHOOD · PEOPLE</text>
+        <text x="174" y="211">A familiar path leads to a peaceful</text>
+        <text x="174" y="218">table, good company, and something</text>
+        <text x="174" y="225">delicious shared between friends.</text>
+        <text x="174" y="237">Notes from the green side of town.</text>
+      </g>
+      <path d="M5 201h158M5 240h158M174 195h157M174 243h157" stroke="#45433d" stroke-width=".35"/>
+      <path d="M112 169v26M82 205v30M286 169v22M245 205v33" stroke="#45433d" stroke-width=".4"/>
+    </pattern>
+    <clipPath id="top-paper">
+      <path d="M0 0h315l-20 16 9 12-24 6 12 17-23 5 4 17-27 4 9 19-22 8 7 14-28 11 3 18-31 3 8 18-28 8 6 16-33 11 11 17-25 11 4 16-30 8 7 21-25 7 5 22-28 10v-2L0 298z"/>
+    </clipPath>
+    <clipPath id="bottom-paper">
+      <path d="M720 945l-24-8-13 16-20-9-13 19-20-8-12 18-19-8-13 18-22-8-15 17-20-9-18 18-20-8-17 18-22-8-17 18-23-7-16 18-20-8-18 17-19-8-16 19-22-7-15 20-21-9-17 20-20-8-19 20-20-7-16 21-20-8-17 18v253h373z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="720" height="1280" fill="#eee9df"/>
+  <rect width="720" height="1280" filter="url(#paper-noise)" opacity=".62"/>
+
+  <path d="M414 0h306v312l-18-10-11 8-17-19-16 7-13-20-19 5-14-17-19 8-10-20-20 5-9-19-22 3-6-20-20 5-8-20-19 5-8-19-19 3-4-20-20 1-8-18-17 3-8-18-19 3-5-19-18 2-7-20-20 1-8-18-18 3-7-17-20 2-9-18-20 2-5-18-19 3-7-18-18 2z" fill="#30476d"/>
+  <path d="M0 1118l22 12 12-15 21 13 14-17 19 12 16-13 17 16 20-9 12 16 20-6 15 18 18-4 14 19 20-5 12 20 19-7 14 21 22-6 12 17 22-5 14 18 23-5 15 18 21-4 14 15 24-4 13 13 30-2 12 11 30-4 18 11 21-4 19 10 18-3 22 9 18-4 19 10 17-2 18 11 19-1 17 13 21-3 17 12 18-2v94H0z" fill="#30476d"/>
+
+  <rect x="-8" y="-8" width="332" height="323" fill="url(#newsprint)" clip-path="url(#top-paper)"/>
+  <rect x="347" y="930" width="380" height="275" fill="url(#newsprint)" clip-path="url(#bottom-paper)"/>
+
+  <path d="M0 301l24-9 12 4 17-8 12 5 17-7 13 5 15-10 12 5 17-9 12 6 17-9 13 5 15-10 13 5 15-8 12 4 17-10 15 7 15-9 13 5 17-10 12 5 18-8 12 5 15-8 14 6 17-9 15 6 17-10 13 5 18-8 12 7 20-9 15 6 18-8 13 6 18-8 14 7 15-7 19 7 17-8 15 8 18-7 20 7 16-5 18 8 14-5 20 10 13-5 19 11 13-5 16 8 19-5 18 10 16-3 19 11 18-2 17 9 18-3 19 10 18-2 15 10 21-2 14 12 19-3 22 14v25H0z" fill="#f4f0e8" opacity=".94"/>
+  <path d="M0 1110l20 8 17-6 18 7 17-5 20 7 18-5 19 9 17-4 20 8 17-6 20 10 17-5 22 8 18-3 21 9 19-4 20 10 18-5 22 11 18-3 20 10 18-3 22 10 18-2 20 11 21-2 17 12 22-1 18 13 22-2 16 13 25-3 18 15v39H0z" fill="#e8e3d9" opacity=".96"/>
+</svg>
