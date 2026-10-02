@@ -50,6 +50,10 @@
   z-index: 1;
 }
 
+footer > img[alt='My Junglee Cafe Logo'] {
+  content: url('/images/my-junglee-cafe.svg');
+}
+
 @media (max-width: 767px) {
   #image-reveal > #about {
     min-height: 760px;

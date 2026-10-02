@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">My Junglee Cafe</title>
+  <desc id="desc">My Junglee Cafe, Bistro and Bar</desc>
+  <g transform="translate(170 -110)" fill="none" stroke="#176b4d" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M385 233c45 5 72 37 94 68 25-28 45-54 81-69 19-8 38-7 57 0-28 4-48 16-65 37 30-10 56-7 79 8-34-2-58 7-79 26 25-3 45 2 62 16-35-5-62 2-86 19" stroke-width="13"/>
+    <path d="M456 301c-9 38-32 65-70 82m91-77c-4 36-20 62-48 79m85-68c4 29 1 52-12 72" stroke-width="10"/>
+    <path d="M424 282c-24-16-45-16-65-3 15 1 24 8 31 20-25-7-44-2-60 14 22-5 41-2 57 9-27 0-47 10-59 29 22-10 45-10 70-1" stroke-width="11"/>
+  </g>
+  <g transform="translate(170 0)">
+    <path d="M474 216c-17-14-21-36-10-66 13 15 20 30 19 47 13-15 30-22 52-20-19 12-29 26-32 45 24-7 44-3 60 12-28-3-49 3-66 20-5-13-12-26-23-38Z" fill="#eb4b1b"/>
+    <path d="M465 194c-8-20-8-39 2-57 12 20 16 38 12 55" fill="#f3b624"/>
+  </g>
+  <text x="600" y="390" text-anchor="middle" fill="#16815b" font-family="'Dancing Script','Brush Script MT',cursive" font-size="118" font-style="italic" font-weight="700" letter-spacing="-4">My Junglee Cafe</text>
+  <path d="M428 430h344" stroke="#e94820" stroke-width="3"/>
+  <text x="600" y="485" text-anchor="middle" fill="#e94820" font-family="Arial,sans-serif" font-size="42" font-weight="700" letter-spacing="5">BISTRO &amp; BAR</text>
+</svg>
